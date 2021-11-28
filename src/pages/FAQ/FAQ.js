@@ -1,8 +1,10 @@
-
+import { useHistory } from "react-router";
 import styled from "styled-components";
+import { trendingTopics, articles } from "../../services/mockApi";
 import Navbar from "./components/Navbar";
 import SearchInput from "./components/SearchInput";
 function FAQ() {
+  const history = useHistory();
   return (
     <StyledPageContainer>
       <StyledHeaderBackground />
@@ -10,13 +12,21 @@ function FAQ() {
       <StyledPageTitle>
         <strong>Como podemos te ajudar?</strong>
       </StyledPageTitle>
-      <SearchInput/>
+      <SearchInput />
       <StyledTrendingTopics>
-        <button>Terapia</button>
-        <button>Transição Hormonal</button>
+        {trendingTopics.map((topic, index) => (
+          <button key={index}>{topic}</button>
+        ))}
       </StyledTrendingTopics>
       <StyledArticlesContainer>
-        <button>Quero iniciar minha transição, e agora?</button>
+        {articles.map((article, index) => (
+          <button
+            key={index}
+            onClick={() => history.push("/article/" + article.id)}
+          >
+            {article.title}
+          </button>
+        ))}
       </StyledArticlesContainer>
     </StyledPageContainer>
   );
@@ -47,6 +57,7 @@ const StyledTrendingTopics = styled.section`
   flex-wrap: wrap;
   justify-content: space-around;
   button {
+    margin-bottom: 8px;
     height: 25px;
     background: #b35efa;
     border: none;
