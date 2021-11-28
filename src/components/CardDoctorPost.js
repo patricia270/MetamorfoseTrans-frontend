@@ -15,7 +15,7 @@ function CardDoctorPost({ doctor, specialty }) {
                 <p>
                     <span>{doctor.speciality}</span> - {doctor.subtitle}
                 </p>
-                <Stars rating={2} margin="10px 0 0 0" />
+                <Stars rating={4} margin="10px 0 0 0" />
             </div>
             <IconHearth />
         </CardInfoDoctor>

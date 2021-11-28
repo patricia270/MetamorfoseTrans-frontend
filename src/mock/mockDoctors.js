@@ -48,6 +48,42 @@ const doctors = [
         imgUrl: "https://s3-alpha-sig.figma.com/img/8160/4e44/7020bffd9378b5296bc054fb9cb7bddf?Expires=1638748800&Signature=PXj5lpUGHaFdN6jzUatATIVhENNy~X4RpVHd3tON7I6i29tmZxaXbGfbXNI2Fscp5N22WElzwmFRJhlUbHSKOC-TijSh7Lh3AciriB92qtEEqGqgpShVBZ55UNbm3f~E5E2Lbe12oi3h-TkcjcBbR0m~IpTtX3mC9YoQW-eNs-Q0d5qn5sSCPlQrA974gzjMlGqYF7j3A4PW4ZyoLz8D0IspuUn4Z56jwU24YEyJJx4VZVI346-PMgrwQt2c9eNSsgnlISZF~ncNwgUaQ1uOtAS87oQZYs11IG-PA4d3A5qGlDrHMhQtapudAn0W93zF~yXgKENZ0DL-Bfh0NqcV6g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
         speciality: "Endocrinologista",
         subtitle: "Especialista em hormonização",
+        about: {
+            speciality: "Tratamento hormonal, problemas de tireoide.",
+            acceptedPlans: "Particular, Planos de saúde.",
+            schooling: [
+                "Formação em Medicina, PUC RJ - 1998.",
+                "Mestrado em Endocrinologia, UFRJ 2000.",
+                " Doutorado, USP - 2006.",
+            ],
+        },
+        contact: {
+            phone: "Contato: (21) 93478-XXXX",
+            email: "L.Pereira@gmail.com",
+            workSchedule: {
+                days: "Segundas, Quartas e Sextas",
+                hours: ["Das 8h - 12h", "das 14h - 18h."],
+            },
+            address:
+                "Estrada do Capão, 568, Sl 204 - Barra Funda. Rio de Janeiro.",
+        },
+        reviews: [
+            {
+                userName: "Larissa da Silva",
+                imgUrl: "https://s3-alpha-sig.figma.com/img/080a/fcaf/141acc1b1a1b3d8bfa1c4a7cac107976?Expires=1638748800&Signature=d~DVYopCCzvZOTgbpgiJ2M5PoxdtId0sCt7mSDwwalBMp9d224Jqz~-4RY433~VJYW-6~vcOg8EPquV0OC23Sq-HsAVAQ4V38TU7VeImAM60nuoib9xhsbNh3rnmF070fgpUbUjdHcSo0XgtSq2BXlJHdm1bFn6pO6mkWH0qrEKc-FWWG5-Sk11HHynC0MSLkCKon9Sv01FkCnGqZC4cm5WgWIh6L~puiSt~bl7taMcnfmP21YD8DhsUbkd6DCDcXA-E0qMkeXa1SBiJ~XrIeyZon2uRjbKmUPr8AUEUIWJsnknpjMQhaseeWL6o3UVYru4z8trAA3Ln6gHc-d1nHg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+                rating: 5,
+                comment:
+                    "Super atencioso, não atrasa o atendimento. Saí com todas as minhas receitas de medicamento e ainda amostra grátis dos meus medicamentos.Super indico!",
+            },
+            {
+                userName: "Larissa da Silva",
+                imgUrl: "https://s3-alpha-sig.figma.com/img/080a/fcaf/141acc1b1a1b3d8bfa1c4a7cac107976?Expires=1638748800&Signature=d~DVYopCCzvZOTgbpgiJ2M5PoxdtId0sCt7mSDwwalBMp9d224Jqz~-4RY433~VJYW-6~vcOg8EPquV0OC23Sq-HsAVAQ4V38TU7VeImAM60nuoib9xhsbNh3rnmF070fgpUbUjdHcSo0XgtSq2BXlJHdm1bFn6pO6mkWH0qrEKc-FWWG5-Sk11HHynC0MSLkCKon9Sv01FkCnGqZC4cm5WgWIh6L~puiSt~bl7taMcnfmP21YD8DhsUbkd6DCDcXA-E0qMkeXa1SBiJ~XrIeyZon2uRjbKmUPr8AUEUIWJsnknpjMQhaseeWL6o3UVYru4z8trAA3Ln6gHc-d1nHg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+
+                rating: 5,
+                comment:
+                    "Super atencioso, não atrasa o atendimento. Saí com todas as minhas receitas de medicamento e ainda amostra grátis dos meus medicamentos.Super indico!",
+            },
+        ],
     },
     {
         id: 3,

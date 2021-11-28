@@ -47,7 +47,7 @@ function Specialties() {
                 <IconFilter />
             </InputContainer>
             <Order>
-                Odernar por: proximidade{" "}
+                Ordernar por: proximidade{" "}
                 <span>
                     <IoIosArrowUp />
                 </span>

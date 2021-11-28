@@ -2,7 +2,7 @@ import { Title, InfoList } from "../../styles/profileStyles";
 
 function Contact({ contactData }) {
     const { phone, email, workSchedule, address } = contactData;
-    console.log(address);
+
     return (
         <InfoList>
             <li>

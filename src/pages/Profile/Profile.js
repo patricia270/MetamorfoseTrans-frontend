@@ -14,7 +14,7 @@ function Profile() {
         const doctorProfile = doctors.find(
             (doctor) => doctor.id === Number(id)
         );
-        console.log(doctorProfile);
+
         setProfileData(doctorProfile);
     }, [id]);
 
@@ -44,7 +44,7 @@ const InnerWrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 94vh;
+    min-height: 100%;
     background-color: #fff;
     border-radius: 8px;
     padding: 10px;

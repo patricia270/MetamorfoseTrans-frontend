@@ -3,7 +3,6 @@ import { Title } from "../../styles/profileStyles";
 import Stars from "../../components/Stars";
 
 function Reviews({ reviewsData }) {
-    console.log(reviewsData);
     return (
         <ReviewsContainer>
             <Title>Depoimentos: </Title>
@@ -50,7 +49,7 @@ const ReviewList = styled.ul`
 
 const Review = styled.li`
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 `;
 
 const InnerReviewContainer = styled.div`
