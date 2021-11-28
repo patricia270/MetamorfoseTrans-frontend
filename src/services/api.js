@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:4000";
+const BASE_URL =
+    process.env.NODE_ENV === "development"
+        ? "http://localhost:4000"
+        : "https://metamorfose.herokuapp.com";
 
 function postSignIn(body) {
     return axios.post(`${BASE_URL}/sign-in`, body);
