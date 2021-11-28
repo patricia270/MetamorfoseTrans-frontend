@@ -6,6 +6,7 @@ import { signInSchema } from "../schemas/schemas";
 import { postSignIn } from "../services/api";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillFacebook } from "react-icons/ai";
+import errors from "../services/errors";
 import {
     FormComponent,
     DivImage,
@@ -36,8 +37,8 @@ function Home() {
                 localStorage.setItem("MetamorfoseTrans", JSON.stringify(resp.data));
                 history.push("/help-choice")               
             })
-            .catch(() => { 
-                alert("houve um erro")              
+            .catch((error) => { 
+                errors(error);             
         })
     }
 

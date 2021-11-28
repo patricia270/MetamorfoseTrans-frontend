@@ -1,6 +1,9 @@
+import { useHistory } from "react-router";
 import { Formik, ErrorMessage} from "formik";
 import { signUpSchema } from "../schemas/schemas";
 import { postSignUp } from "../services/api";
+import errors from "../services/errors";
+import Swal from 'sweetalert2';
 import {
     FormComponent,
     DivImage,
@@ -13,6 +16,7 @@ import {
 } from "../styles/genericStyledComponents";
 
 function SignUp() {
+    const history = useHistory();
     const initicialValues = {
         completeName: "",
         email: "",
@@ -28,10 +32,16 @@ function SignUp() {
             password,
         })
             .then(() => {
-                alert("Registrado com sucesso! Pode fazer login :)")
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Que maraaa...',
+                    text: "Deu tudo certo com seu cadastro, já pode fazer login :)",
+                })
+                history.push("/");
             })
             .catch((error) => {
-                alert("Ocorreu um erro!")
+                console.log(error.response.status)
+                errors(error)
             })
     }
 
