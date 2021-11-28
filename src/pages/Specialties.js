@@ -26,8 +26,7 @@ function Specialties() {
             setByEspecialtyList(doctors.filter((e) => e.speciality === specialty))
         }
     }
-    console.log(byespecialtyList)
-
+    
     return(
         <Main>
             <Navbar />
