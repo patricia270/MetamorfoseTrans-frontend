@@ -4,6 +4,8 @@ import GlobalStyle from "./styles/GlobalStyle";
 import UserContext from "./contexts/userContext";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
+import Specialties from "./pages/Specialties";
+import HelpChoice from "./pages/HelpChoice";
 
 function App() {
   const userData = JSON.parse(localStorage.getItem("MetamorfoseTrans"));
@@ -18,6 +20,12 @@ function App() {
             </Route>
             <Route path="/sign-up" exact>
               <SignUp />
+            </Route>
+            <Route path="/help-choice" exact>
+              <HelpChoice />
+            </Route>
+            <Route path="/specialties" exact>
+              <Specialties />
             </Route>
         </Switch>
       <GlobalStyle />
