@@ -1,15 +1,18 @@
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { useContext } from "react";
 import { Formik, ErrorMessage} from "formik";
 import UserContext from "../contexts/userContext";
 import { signInSchema } from "../schemas/schemas";
 import { postSignIn } from "../services/api";
+import { FcGoogle } from "react-icons/fc";
+import { AiFillFacebook } from "react-icons/ai";
 import {
     FormComponent,
     DivImage,
     Input,
     MyBox,
     ButtonComponent,
+    BoxSocialLogos,
 } from "../styles/genericStyledComponents";
 
 function Home() {
@@ -67,10 +70,24 @@ function Home() {
                         <ButtonComponent type="submit">Login</ButtonComponent>
                     </FormComponent>
                     <span>Ou</span>
+                    <BoxSocialLogos>
+                        <FcGoogle size="30" />
+                        <p>Google</p>
+                    </BoxSocialLogos>
+                    <BoxSocialLogos>
+                        <AiFillFacebook color="#3b5998" size="30"  />
+                        <p>Facebook</p>
+                    </BoxSocialLogos>
+                    <Link to="#">
+                        Esqueceu a senha?
+                    </Link>
+                    <Link to="/sign-up">
+                        Primeira vez? Faça seu Cadastro.
+                    </Link>
                 </MyBox>
             )}
         </Formik>
     );
 }
 
-export default Home;
+export default Home; 
