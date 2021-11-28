@@ -71,14 +71,18 @@ function About() {
 function Contact() {
     return (
         <InfoList>
-            <li>Contato: (21) 93478-XXXXE-mail: L.Pereira@gmail.com</li>
             <li>
-                Atendimentos: Segundas, Quartas e Sextas Das 8h - 12h e das 14h
-                - 18h.
+                {" "}
+                <Title>Contato</Title> (21) 93478-XXXX E-mail:
+                L.Pereira@gmail.com
             </li>
             <li>
-                Formação em Medicina, PUC RJ - 1998.Mestrado em Endocrinologia,
-                UFRJ 2000.Doutorado, USP - 2006.
+                <Title>Atendimentos</Title> Segundas, Quartas e Sextas Das 8h -
+                12h e das 14h - 18h.
+            </li>
+            <li>
+                <Title>Endereço</Title> Estrada do Capão, 568, Sl 204 - Barra
+                Funda. Rio de Janeiro.
             </li>
         </InfoList>
     );
@@ -99,6 +103,7 @@ const SwitchInfoButton = styled.button`
     background-color: transparent;
     border: none;
     flex-grow: 1;
+    font-size: 14px;
     border-bottom: ${({ showBorder }) =>
         showBorder ? "3px solid rgba(25, 118, 210, 0.5)" : "none"};
 `;

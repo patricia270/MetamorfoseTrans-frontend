@@ -35,7 +35,6 @@ const InnerWrapper = styled.div`
     background-color: #fff;
     border-radius: 8px;
     padding: 10px;
-    color: #464a4d;
 `;
 
 const Name = styled.h1`

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
         /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -37,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         line-height: 1;
         font-family: 'Poppins', sans-serif;
+        color: #464a4d;
     }
     ol, ul {
         list-style: none;
