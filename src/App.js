@@ -7,6 +7,8 @@ import SignUp from "./pages/SignUp";
 import Specialties from "./pages/Specialties";
 import HelpChoice from "./pages/HelpChoice";
 import Profile from "./pages/Profile/Profile";
+import FAQ from "./pages/FAQ/FAQ";
+import Article from "./pages/Article";
 
 function App() {
     const userData = JSON.parse(localStorage.getItem("MetamorfoseTrans"));
@@ -30,6 +32,12 @@ function App() {
                     </Route>
                     <Route path="/profile/:id" exact>
                         <Profile />
+                    </Route>
+                    <Route path="/questions" exact>
+                        <FAQ />
+                    </Route>
+                    <Route path="/article/:articleId" exact>
+                        <Article />
                     </Route>
                 </Switch>
                 <GlobalStyle />

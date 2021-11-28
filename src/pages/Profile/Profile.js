@@ -4,7 +4,7 @@ import styled from "styled-components";
 import InfoMenu from "./InfoMenu";
 
 import { useEffect, useState } from "react";
-import { doctors } from "../../mock/mockData";
+import { doctors } from "../../mock/mockDoctors";
 import { useParams } from "react-router";
 
 function Profile() {
