@@ -4,7 +4,7 @@ import { MdArrowBackIosNew, MdAdd } from "react-icons/md";
 function Navbar() {
     return(
         <Header>
-            <MdArrowBackIosNew size="25" />
+            <MdArrowBackIosNew size="25" color="white"/>
             <h1>Especialistas</h1>
             <MdAdd size="30"/>
         </Header>

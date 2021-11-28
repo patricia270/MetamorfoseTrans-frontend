@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import Specialties from "./pages/Specialties";
 import HelpChoice from "./pages/HelpChoice";
+import FAQ from "./pages/FAQ/FAQ";
 
 function App() {
   const userData = JSON.parse(localStorage.getItem("MetamorfoseTrans"));
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/specialties" exact>
               <Specialties />
+            </Route>
+            <Route path="/questions" exact>
+              <FAQ />
             </Route>
         </Switch>
       <GlobalStyle />
