@@ -1,5 +1,9 @@
+import { useHistory } from "react-router-dom";
+import { useContext } from "react";
 import { Formik, ErrorMessage} from "formik";
+import UserContext from "../contexts/userContext";
 import { signInSchema } from "../schemas/schemas";
+import { postSignIn } from "../services/api";
 import {
     FormComponent,
     DivImage,
@@ -9,13 +13,23 @@ import {
 } from "../styles/genericStyledComponents";
 
 function Home() {
+    const { setUser } = useContext(UserContext);
+    const history = useHistory();
+
     const initicialValues = {
         email: "",
         password: "",
     }
 
     function sendLogingInfo(values) {
-        console.log(values)
+        postSignIn(values)
+            .then((resp) => {
+                setUser(resp.data); 
+                history.push("/help-choice")               
+            })
+            .catch(() => { 
+                alert("houve um erro")              
+        })
     }
 
     return(
@@ -38,6 +52,7 @@ function Home() {
                         )} />
                         <Input 
                             name="password"
+                            type="password"
                             placeholder="SENHA"
                         />
                         <ErrorMessage name='password' render={msg => ( 
