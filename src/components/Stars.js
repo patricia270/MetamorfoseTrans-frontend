@@ -1,14 +1,14 @@
 import { FaStar } from "react-icons/fa";
 import styled from "styled-components";
 
-function Stars({ rating }) {
+function Stars({ rating, margin }) {
     const yellow = Array(rating).fill("#ffdf2b");
 
     const notYellow = Array(5 - rating).fill("#CDCDCD");
     const classes = yellow.concat(notYellow);
 
     return (
-        <StarsContainer>
+        <StarsContainer margin={margin}>
             <FaStar size="20" color={classes[0]} />
             <FaStar size="20" color={classes[1]} />
             <FaStar size="20" color={classes[2]} />
@@ -18,6 +18,8 @@ function Stars({ rating }) {
     );
 }
 
-const StarsContainer = styled.div``;
+const StarsContainer = styled.div`
+    margin: ${({ margin }) => (margin ? margin : "0")};
+`;
 
 export default Stars;

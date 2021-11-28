@@ -18,19 +18,21 @@ function Specialties() {
     const [byespecialtyList, setByEspecialtyList] = useState([]);
 
     if (!localStorage.getItem("MetamorfoseTrans")) {
-        history.push('/');
+        history.push("/");
     }
 
     function listBySpecialty(e) {
-        if(e.key === "Enter") {
-            setByEspecialtyList(doctors.filter((e) => e.speciality === specialty))
+        if (e.key === "Enter") {
+            setByEspecialtyList(
+                doctors.filter((e) => e.speciality === specialty)
+            );
         }
     }
-    
-    return(
+
+    return (
         <Main>
-            <Navbar />
-            <SearchBox 
+            <Navbar>Especialistas </Navbar>
+            <SearchBox
                 placeholder="pesquisar por especialidade"
                 onChange={(e) => setSpecialty(e.target.value)}
                 value={specialty}
@@ -38,21 +40,28 @@ function Specialties() {
             />
             <IconSearch />
             <IconFilter />
-            <Order>Odernar por: proximidade <span><IoIosArrowUp /></span></Order>
-            { !byespecialtyList.length ? doctors.map((doctor) => (
-               <CardDoctorPost 
-                doctor={doctor} 
-                key={doctor.id}
-                specialty={specialty}
-                />
-            )): byespecialtyList.map((doctor) => (
-                <CardDoctorPost 
-                 doctor={doctor} 
-                 key={doctor.id}
-                 specialty={specialty}
-                 />))}
+            <Order>
+                Odernar por: proximidade{" "}
+                <span>
+                    <IoIosArrowUp />
+                </span>
+            </Order>
+            {!byespecialtyList.length
+                ? doctors.map((doctor) => (
+                      <CardDoctorPost
+                          doctor={doctor}
+                          key={doctor.id}
+                          specialty={specialty}
+                      />
+                  ))
+                : byespecialtyList.map((doctor) => (
+                      <CardDoctorPost
+                          doctor={doctor}
+                          key={doctor.id}
+                          specialty={specialty}
+                      />
+                  ))}
         </Main>
-
     );
 }
 

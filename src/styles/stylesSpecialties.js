@@ -7,7 +7,7 @@ const CardInfoDoctor = styled.div`
     width: 90.4vw;
     height: 144px;
     border-radius: 10px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 30px 0 0 16px;
     display: flex;
     position: relative;
@@ -25,14 +25,13 @@ const CardInfoDoctor = styled.div`
     }
     p {
         font-size: 14px;
-        color: #464A4D;
+        color: #464a4d;
         max-width: 55vw;
     }
     span {
         font-weight: bold;
     }
     div {
-
     }
 `;
 
@@ -41,18 +40,17 @@ const Stars = styled.div`
 `;
 
 const SearchBox = styled.input`
-    margin: 103px 0 29px 0;
+    margin: 10px 0 29px 0;
     min-height: 57px;
     border-radius: 6px;
     text-align: center;
     ::placeholder {
         font-size: 16px;
     }
-
 `;
 
 const Order = styled.div`
-    color: #FFFFFF;
+    color: #ffffff;
     align-self: flex-start;
     padding-left: 6vw;
     margin-bottom: 29px;
@@ -61,7 +59,7 @@ const Order = styled.div`
 const IconSearch = styled(IoSearchSharp)`
     width: 25px;
     height: 25px;
-    color: #C4C4C4;
+    color: #c4c4c4;
     position: absolute;
     left: 10vw;
     top: 18vh;
@@ -92,4 +90,4 @@ export {
     IconSearch,
     IconFilter,
     IconHearth,
-}
+};
