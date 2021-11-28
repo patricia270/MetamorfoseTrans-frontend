@@ -3,6 +3,7 @@ import { useState } from "react";
 import GlobalStyle from "./styles/GlobalStyle";
 import UserContext from "./contexts/userContext";
 import Home from "./pages/Home";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const userData = JSON.parse(localStorage.getItem("MetamorfoseTrans"));
@@ -14,6 +15,9 @@ function App() {
         <Switch>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/sign-up" exact>
+              <SignUp />
             </Route>
         </Switch>
       <GlobalStyle />

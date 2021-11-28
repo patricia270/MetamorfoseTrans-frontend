@@ -10,7 +10,7 @@ const FormComponent = styled(Form)`
     p {
         color: #FF0000;
         align-self: start;
-        margin-top: 5px;
+        margin: -15px 0 10px 0;
         text-align: start;
     }
 `;
@@ -18,7 +18,7 @@ const FormComponent = styled(Form)`
 const Input = styled(Field)`
     width: 83.87vw;
     height: 57px;
-    margin-top: 20px;
+    margin: 10px 0 20px 0;
     padding-left: 20px;
     border-radius: 6px;
     border: 1px solid #444444;
@@ -83,6 +83,19 @@ const BoxSocialLogos = styled.div`
     }
 `;
 
+const Section = styled.section`
+    width: 83.87vw;
+`;
+const Label = styled.label`
+    color: #979292;
+    font-size: 14px;
+    margin-bottom: 5px;
+`;
+
+const TermsCheckbox = styled(Field)`
+    margin-bottom: 30px;
+`;
+
 export {
     FormComponent,
     DivImage,
@@ -90,4 +103,7 @@ export {
     MyBox,
     ButtonComponent,
     BoxSocialLogos,
+    Section,
+    Label,
+    TermsCheckbox,
 }

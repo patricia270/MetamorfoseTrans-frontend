@@ -5,7 +5,6 @@ const GlobalStyle = createGlobalStyle`
     v2.0 | 20110126
     License: none (public domain)
     */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');    
 
     * {
         box-sizing: border-box;
