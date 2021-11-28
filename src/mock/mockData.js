@@ -9,7 +9,6 @@ const doctors = [
         about: {
             speciality: "Tratamento hormonal, problemas de tireoide.",
             acceptedPlans: "Particular, Planos de saúde.",
-            profissionalExperience: "",
             schooling: [
                 "Formação em Medicina, PUC RJ - 1998.",
                 "Mestrado em Endocrinologia, UFRJ 2000.",
@@ -59,7 +58,6 @@ const doctors = [
         about: {
             speciality: "Tratamento hormonal, problemas de tireoide.",
             acceptedPlans: "Particular, Planos de saúde.",
-            profissionalExperience: "",
             schooling: [
                 "Formação em Medicina, PUC RJ - 1998.",
                 "Mestrado em Endocrinologia, UFRJ 2000.",
@@ -86,6 +84,8 @@ const doctors = [
             },
             {
                 userName: "Larissa da Silva",
+                imgUrl: "https://s3-alpha-sig.figma.com/img/080a/fcaf/141acc1b1a1b3d8bfa1c4a7cac107976?Expires=1638748800&Signature=d~DVYopCCzvZOTgbpgiJ2M5PoxdtId0sCt7mSDwwalBMp9d224Jqz~-4RY433~VJYW-6~vcOg8EPquV0OC23Sq-HsAVAQ4V38TU7VeImAM60nuoib9xhsbNh3rnmF070fgpUbUjdHcSo0XgtSq2BXlJHdm1bFn6pO6mkWH0qrEKc-FWWG5-Sk11HHynC0MSLkCKon9Sv01FkCnGqZC4cm5WgWIh6L~puiSt~bl7taMcnfmP21YD8DhsUbkd6DCDcXA-E0qMkeXa1SBiJ~XrIeyZon2uRjbKmUPr8AUEUIWJsnknpjMQhaseeWL6o3UVYru4z8trAA3Ln6gHc-d1nHg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+
                 rating: 5,
                 comment:
                     "Super atencioso, não atrasa o atendimento. Saí com todas as minhas receitas de medicamento e ainda amostra grátis dos meus medicamentos.Super indico!",
@@ -98,6 +98,42 @@ const doctors = [
         imgUrl: "https://s3-alpha-sig.figma.com/img/080a/fcaf/141acc1b1a1b3d8bfa1c4a7cac107976?Expires=1638748800&Signature=d~DVYopCCzvZOTgbpgiJ2M5PoxdtId0sCt7mSDwwalBMp9d224Jqz~-4RY433~VJYW-6~vcOg8EPquV0OC23Sq-HsAVAQ4V38TU7VeImAM60nuoib9xhsbNh3rnmF070fgpUbUjdHcSo0XgtSq2BXlJHdm1bFn6pO6mkWH0qrEKc-FWWG5-Sk11HHynC0MSLkCKon9Sv01FkCnGqZC4cm5WgWIh6L~puiSt~bl7taMcnfmP21YD8DhsUbkd6DCDcXA-E0qMkeXa1SBiJ~XrIeyZon2uRjbKmUPr8AUEUIWJsnknpjMQhaseeWL6o3UVYru4z8trAA3Ln6gHc-d1nHg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
         speciality: "Psicólogo",
         subtitle: "Especializado em transtornos de humor",
+        about: {
+            speciality: "Tratamento hormonal, problemas de tireoide.",
+            acceptedPlans: "Particular, Planos de saúde.",
+            schooling: [
+                "Formação em Medicina, PUC RJ - 1998.",
+                "Mestrado em Endocrinologia, UFRJ 2000.",
+                " Doutorado, USP - 2006.",
+            ],
+        },
+        contact: {
+            phone: "Contato: (21) 93478-XXXX",
+            email: "L.Pereira@gmail.com",
+            workSchedule: {
+                days: "Segundas, Quartas e Sextas",
+                hours: ["Das 8h - 12h", "das 14h - 18h."],
+            },
+            address:
+                "Estrada do Capão, 568, Sl 204 - Barra Funda. Rio de Janeiro.",
+        },
+        reviews: [
+            {
+                userName: "Larissa da Silva",
+                imgUrl: "https://s3-alpha-sig.figma.com/img/080a/fcaf/141acc1b1a1b3d8bfa1c4a7cac107976?Expires=1638748800&Signature=d~DVYopCCzvZOTgbpgiJ2M5PoxdtId0sCt7mSDwwalBMp9d224Jqz~-4RY433~VJYW-6~vcOg8EPquV0OC23Sq-HsAVAQ4V38TU7VeImAM60nuoib9xhsbNh3rnmF070fgpUbUjdHcSo0XgtSq2BXlJHdm1bFn6pO6mkWH0qrEKc-FWWG5-Sk11HHynC0MSLkCKon9Sv01FkCnGqZC4cm5WgWIh6L~puiSt~bl7taMcnfmP21YD8DhsUbkd6DCDcXA-E0qMkeXa1SBiJ~XrIeyZon2uRjbKmUPr8AUEUIWJsnknpjMQhaseeWL6o3UVYru4z8trAA3Ln6gHc-d1nHg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+                rating: 5,
+                comment:
+                    "Super atencioso, não atrasa o atendimento. Saí com todas as minhas receitas de medicamento e ainda amostra grátis dos meus medicamentos.Super indico!",
+            },
+            {
+                userName: "Larissa da Silva",
+                imgUrl: "https://s3-alpha-sig.figma.com/img/080a/fcaf/141acc1b1a1b3d8bfa1c4a7cac107976?Expires=1638748800&Signature=d~DVYopCCzvZOTgbpgiJ2M5PoxdtId0sCt7mSDwwalBMp9d224Jqz~-4RY433~VJYW-6~vcOg8EPquV0OC23Sq-HsAVAQ4V38TU7VeImAM60nuoib9xhsbNh3rnmF070fgpUbUjdHcSo0XgtSq2BXlJHdm1bFn6pO6mkWH0qrEKc-FWWG5-Sk11HHynC0MSLkCKon9Sv01FkCnGqZC4cm5WgWIh6L~puiSt~bl7taMcnfmP21YD8DhsUbkd6DCDcXA-E0qMkeXa1SBiJ~XrIeyZon2uRjbKmUPr8AUEUIWJsnknpjMQhaseeWL6o3UVYru4z8trAA3Ln6gHc-d1nHg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+
+                rating: 5,
+                comment:
+                    "Super atencioso, não atrasa o atendimento. Saí com todas as minhas receitas de medicamento e ainda amostra grátis dos meus medicamentos.Super indico!",
+            },
+        ],
     },
 ];
 
