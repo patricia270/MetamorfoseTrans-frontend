@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
         /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
     License: none (public domain)
     */
 
+    * {
+        box-sizing: border-box;
+    }
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
     a, abbr, acronym, address, big, cite, code,
@@ -31,8 +34,15 @@ const GlobalStyle = createGlobalStyle`
     footer, header, hgroup, menu, nav, section {
         display: block;
     }
+
+    html, body, #root {
+        height: 100%;
+    }
+
     body {
         line-height: 1;
+        font-family: 'Poppins', sans-serif;
+        color: #464a4d;
     }
     ol, ul {
         list-style: none;
@@ -48,6 +58,13 @@ const GlobalStyle = createGlobalStyle`
     table {
         border-collapse: collapse;
         border-spacing: 0;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    strong{
+        font-weight:bold;
     }
 `;
 
