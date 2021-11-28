@@ -1,44 +1,54 @@
 import { Formik, ErrorMessage} from "formik";
-import { FcGoogle } from "react-icons/fc";
+import { signInSchema } from "../schemas/schemas";
 import {
     FormComponent,
     DivImage,
     Input,
     MyBox,
     ButtonComponent,
-    ContainerComponent,
 } from "../styles/genericStyledComponents";
 
 function Home() {
     const initicialValues = {
-        name: "",
+        email: "",
         password: "",
     }
 
+    function sendLogingInfo(values) {
+        console.log(values)
+    }
+
     return(
-        <ContainerComponent>
-            <Formik
-                initialValues={initicialValues}
-            >
-                {() => (
-                    <MyBox>
-                        <DivImage />
-                        <FormComponent>
-                            <Input
-                                name="name"
-                                placeholder="USUÁRIO"
-                            />
-                            <Input 
-                                name="password"
-                                placeholder="SENHA"
-                            />
-                            <ButtonComponent>Login</ButtonComponent>
-                        </FormComponent>
-                    </MyBox>
-                )}
-            </Formik>
-            <p>Ou</p>
-        </ContainerComponent>
+
+        <Formik
+            initialValues={initicialValues}
+            validationSchema={signInSchema}
+            onSubmit={sendLogingInfo}
+        >
+            {() => (
+                <MyBox>
+                    <DivImage />
+                    <FormComponent>
+                        <Input
+                            name="email"
+                            placeholder="USUÁRIO"
+                        />
+                        <ErrorMessage name='email' render={msg => ( 
+                            <p>{msg}</p>
+                        )} />
+                        <Input 
+                            name="password"
+                            placeholder="SENHA"
+                        />
+                        <ErrorMessage name='password' render={msg => ( 
+                            <p>{msg}</p>
+                        )} />
+                        <ButtonComponent type="submit">Login</ButtonComponent>
+                    </FormComponent>
+                    <span>Ou</span>
+                </MyBox>
+            )}
+        </Formik>
     );
 }
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Form, Field } from "formik";
-import { Box, Container } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 
 const FormComponent = styled(Form)`
     display: flex;
@@ -11,7 +11,7 @@ const FormComponent = styled(Form)`
 const Input = styled(Field)`
     width: 83.87vw;
     height: 57px;
-    margin-bottom: 20px;
+    margin-top: 20px;
     padding-left: 20px;
     border-radius: 6px;
     border: 1px solid #444444;
@@ -28,18 +28,11 @@ const MyBox = styled(Box)`
         color: #979292;
         font-weight: bold;
     }
-`;
-
-const ContainerComponent = styled(Container)`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     p {
-        margin-top: 34px;
-        font-size: 24px;
-        color: #979292;
-        font-weight: bold;
-        text-align: center;
+        color: #FF0000;
+        align-self: start;
+        margin-top: 5px;
+        text-align: start;
     }
 `;
 
@@ -56,6 +49,7 @@ const ButtonComponent = styled.button`
     height: 57px;
     font-size: 18px;
     border-radius: 6px;
+    margin-top: 20px;
 `;
 
 export {
@@ -64,5 +58,4 @@ export {
     Input,
     MyBox,
     ButtonComponent,
-    ContainerComponent,
 }
