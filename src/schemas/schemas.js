@@ -11,7 +11,7 @@ const signInSchema = Yup.object({
 });
 
 const signUpSchema = Yup.object({
-    completeName: Yup.string().min(3, "Deve ter no mínimo 3 caracteres")
+    completeName: Yup.string().trim().min(3, "Deve ter no mínimo 3 caracteres")
     .max(60, "Deve ter no máximo 60 caracteres").required("Por favor, preencha este campo."),
     email: Yup.string().max(60, "Deve ter no máximo 60 caracteres.")
     .email("Insira um email válido.")

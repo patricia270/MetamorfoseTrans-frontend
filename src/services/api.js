@@ -6,6 +6,12 @@ function postSignIn(body) {
     return axios.post(`${BASE_URL}/sign-in`, body);
 }
 
+function postSignUp(body) {
+    console.log(JSON.stringify(body));
+    return axios.post(`${BASE_URL}/sign-up`, body);
+}
+
 export {
     postSignIn,
+    postSignUp,
 };
