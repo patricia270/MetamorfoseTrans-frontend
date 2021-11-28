@@ -28,7 +28,7 @@ function App() {
                     <Route path="/specialties" exact>
                         <Specialties />
                     </Route>
-                    <Route path="/profile" exact>
+                    <Route path="/profile/:id" exact>
                         <Profile />
                     </Route>
                 </Switch>

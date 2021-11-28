@@ -3,23 +3,36 @@ import { Main } from "../../styles/genericStyledComponents";
 import styled from "styled-components";
 import InfoMenu from "./InfoMenu";
 import { FaStar } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { doctors } from "../../mock/mockData";
+import { useParams } from "react-router";
 
 function Profile() {
+    const [profileData, setProfileData] = useState(null);
+    const { id } = useParams();
+
+    useEffect(() => {
+        const doctorProfile = doctors.find(
+            (doctor) => doctor.id === Number(id)
+        );
+        console.log(doctorProfile);
+        setProfileData(doctorProfile);
+    }, [id]);
+
+    if (!profileData) return "carregando";
     return (
         <Main>
             <Navbar />
             <InnerWrapper>
                 <ProfileHeader>
                     <AuxContainer>
-                        <Image src="https://myteledoc.app/wp-content/uploads/2020/09/happy-young-female-doctor-smiling-and-looking-at-c-WDEKYYG.jpg" />
-                        <Name>Dr. Lucas Pereira</Name>
+                        <Image src={profileData.imgUrl} />
+                        <Name>{profileData.name}</Name>
                         <div>
-                            <Bold>Endocrinologista </Bold> - Especialista em
-                            hormonização
+                            <Bold>{profileData.speciality} </Bold> -{" "}
+                            {profileData.subtitle}
                         </div>
-                        <div>
-                            <Bold>CRM:</Bold> 85490/54
-                        </div>
+                        <div>{profileData.doctorCode}</div>
                         <Stars>
                             <FaStar size="20" color="yellow" />
                             <FaStar size="20" color="#CDCDCD" />
@@ -29,7 +42,7 @@ function Profile() {
                         </Stars>
                     </AuxContainer>
                 </ProfileHeader>
-                <InfoMenu />
+                <InfoMenu profileData={profileData} />
             </InnerWrapper>
         </Main>
     );
