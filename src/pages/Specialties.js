@@ -11,6 +11,7 @@ import {
     IconFilter,
 } from "../styles/stylesSpecialties";
 import CardDoctorPost from "../components/CardDoctorPost";
+import styled from "styled-components";
 
 function Specialties() {
     const history = useHistory();
@@ -24,7 +25,10 @@ function Specialties() {
     function listBySpecialty(e) {
         if (e.key === "Enter") {
             setByEspecialtyList(
-                doctors.filter((e) => e.speciality === specialty)
+                doctors.filter(
+                    (e) =>
+                        e.speciality.toLowerCase() === specialty.toLowerCase()
+                )
             );
         }
     }
@@ -32,14 +36,16 @@ function Specialties() {
     return (
         <Main>
             <Navbar>Especialistas </Navbar>
-            <SearchBox
-                placeholder="pesquisar por especialidade"
-                onChange={(e) => setSpecialty(e.target.value)}
-                value={specialty}
-                onKeyPress={listBySpecialty}
-            />
-            <IconSearch />
-            <IconFilter />
+            <InputContainer>
+                <SearchBox
+                    placeholder="pesquisar por especialidade"
+                    onChange={(e) => setSpecialty(e.target.value)}
+                    value={specialty}
+                    onKeyPress={listBySpecialty}
+                />
+                <IconSearch />
+                <IconFilter />
+            </InputContainer>
             <Order>
                 Odernar por: proximidade{" "}
                 <span>
@@ -64,5 +70,9 @@ function Specialties() {
         </Main>
     );
 }
+
+const InputContainer = styled.div`
+    position: relative;
+`;
 
 export default Specialties;

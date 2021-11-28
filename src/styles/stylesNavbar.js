@@ -6,7 +6,8 @@ const Header = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    background-color: #ffffff;
+    background-color: ${({ transparent }) =>
+        transparent ? "transparent" : "#ffffff"};
     align-items: center;
     position: fixed;
     top: 0;

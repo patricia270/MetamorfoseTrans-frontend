@@ -2,14 +2,9 @@ import Navbar from "../../components/Navbar";
 import { Main } from "../../styles/genericStyledComponents";
 import styled from "styled-components";
 import InfoMenu from "./InfoMenu";
-
 import { useEffect, useState } from "react";
-<<<<<<< HEAD
-import { doctors } from "../../mockData/mockData";
-=======
-import { doctors } from "../../mock/mockDoctors";
->>>>>>> feat/faq
 import { useParams } from "react-router";
+import { doctors } from "../../mock/mockDoctors";
 
 function Profile() {
     const [profileData, setProfileData] = useState(null);

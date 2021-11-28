@@ -1,28 +1,17 @@
-import { MdArrowBackIosNew,MdAdd } from "react-icons/md";
-import styled from "styled-components";
+import { MdArrowBackIosNew, MdAdd } from "react-icons/md";
+import { useHistory } from "react-router-dom";
+import Header from "../../../styles/stylesNavbar";
 
-function Navbar() {
-    return(
-        <Header >
-            <MdArrowBackIosNew size="25" color="white"/>
-            <MdAdd size="30" color="white"/>
+function Navbar({ children, transparent }) {
+    const history = useHistory();
+
+    return (
+        <Header transparent onClick={() => history.goBack()}>
+            <MdArrowBackIosNew size="25" />
+            <h1>{children}</h1>
+            <MdAdd size="30" />
         </Header>
     );
 }
-
-const Header = styled.header`
-    height: 80px;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    background-color: none;
-    align-items: center;
-    border-radius: 6px;
-    h1 {
-        font-size: 25px;
-        font-weight: bold;
-    }
-`;
 
 export default Navbar;

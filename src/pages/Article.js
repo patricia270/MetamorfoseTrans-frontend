@@ -2,6 +2,7 @@ import { useHistory, useParams } from "react-router";
 import styled from "styled-components";
 import { articles } from "../mock/mockFAQ";
 import { MdArrowBackIos } from "react-icons/md";
+import Navbar from "../components/Navbar";
 
 export default function Article() {
     const history = useHistory();

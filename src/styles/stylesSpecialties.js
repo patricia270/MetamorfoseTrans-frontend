@@ -61,8 +61,8 @@ const IconSearch = styled(IoSearchSharp)`
     height: 25px;
     color: #c4c4c4;
     position: absolute;
-    left: 10vw;
-    top: 18vh;
+    left: 15px;
+    top: calc(50% - 25px);
 `;
 
 const IconFilter = styled(FiFilter)`
@@ -70,8 +70,8 @@ const IconFilter = styled(FiFilter)`
     height: 25px;
     color: #979292;
     position: absolute;
-    right: 10vw;
-    top: 18vh;
+    right: 15px;
+    top: calc(50% - 25px);
 `;
 
 const IconHearth = styled(AiOutlineHeart)`

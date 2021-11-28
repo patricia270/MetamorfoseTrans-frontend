@@ -8,7 +8,7 @@ function FAQ() {
     return (
         <StyledPageContainer>
             <StyledHeaderBackground />
-            <Navbar />
+            <Navbar transparent />
             <StyledPageTitle>
                 <strong>Como podemos te ajudar?</strong>
             </StyledPageTitle>
@@ -41,10 +41,9 @@ const StyledArticlesContainer = styled.main`
     button {
         font-family: "Poppins", sans-serif;
         font-size: 14px;
-        height: 22px;
         width: 100%;
         color: #000000;
-        padding-bottom: 32px;
+        padding: 20px 0;
         background: none;
         border: none;
         border-bottom: 1px solid #c4c4c4;
@@ -73,6 +72,7 @@ const StyledPageTitle = styled.h1`
     font-family: "Poppins", sans-serif;
     color: #ffffff;
     width: 90%;
+    margin-top: 90px;
 `;
 const StyledPageContainer = styled.div`
     display: flex;
