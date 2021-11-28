@@ -96,6 +96,19 @@ const TermsCheckbox = styled(Field)`
     margin-bottom: 30px;
 `;
 
+const Main = styled.div`
+    background-image: linear-gradient(rgba(245, 168, 184, 1),rgba(179, 94, 250, 1) );
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+        width: 90.4vw;
+        height: 57px;
+    }
+`;
+
+
 export {
     FormComponent,
     DivImage,
@@ -106,4 +119,5 @@ export {
     Section,
     Label,
     TermsCheckbox,
+    Main,
 }
