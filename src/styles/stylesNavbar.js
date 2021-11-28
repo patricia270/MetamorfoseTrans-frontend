@@ -8,7 +8,9 @@ const Header = styled.div`
     padding: 0 20px;
     background-color: #FFFFFF;
     align-items: center;
-    border-radius: 6px;
+    position: fixed;
+    z-index: 1;
+
     h1 {
         font-size: 25px;
         font-weight: bold;

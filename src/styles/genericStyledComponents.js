@@ -98,7 +98,7 @@ const TermsCheckbox = styled(Field)`
 
 const Main = styled.div`
     background-image: linear-gradient(rgba(245, 168, 184, 1),rgba(179, 94, 250, 1) );
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
