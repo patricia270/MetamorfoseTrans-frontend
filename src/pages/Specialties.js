@@ -1,9 +1,9 @@
 import { useHistory } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { Main } from "../styles/genericStyledComponents";
 import { IoIosArrowUp } from "react-icons/io";
-import { doctors } from "../mockData/mockData";
+import { doctors } from "../mock/mockDoctors";
 import {
     SearchBox,
     Order,
