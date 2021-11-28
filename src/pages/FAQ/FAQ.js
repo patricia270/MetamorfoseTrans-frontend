@@ -1,5 +1,7 @@
+
 import styled from "styled-components";
 import Navbar from "./components/Navbar";
+import SearchInput from "./components/SearchInput";
 function FAQ() {
   return (
     <StyledPageContainer>
@@ -8,7 +10,7 @@ function FAQ() {
       <StyledPageTitle>
         <strong>Como podemos te ajudar?</strong>
       </StyledPageTitle>
-      <StyledSearchBox placeholder="Pesquisar" type="text" />
+      <SearchInput/>
       <StyledTrendingTopics>
         <button>Terapia</button>
         <button>Transição Hormonal</button>
@@ -22,22 +24,22 @@ function FAQ() {
 
 export default FAQ;
 const StyledArticlesContainer = styled.main`
-display:flex;
-flex-direction:column;
-width:90%;
-margin-top:48px;
-button{
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  height: 22px;
-  width:100%;
-  color: #000000;
-  padding-bottom:32px;
-  background:none;
-  border:none;
-  border-bottom: 1px solid #C4C4C4;
-}
-`
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 48px;
+  button {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    height: 22px;
+    width: 100%;
+    color: #000000;
+    padding-bottom: 32px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #c4c4c4;
+  }
+`;
 const StyledTrendingTopics = styled.section`
   margin-top: 70px;
   width: 90%;
@@ -53,15 +55,6 @@ const StyledTrendingTopics = styled.section`
     font-family: "Poppins", sans-serif;
     color: #ffffff;
   }
-`;
-const StyledSearchBox = styled.input`
-  margin-top: 32px;
-  width: 83.87vw;
-  height: 57px;
-  padding-left: 20px;
-  border-radius: 6px;
-  border: 1px solid #444444;
-  outline: 0;
 `;
 const StyledPageTitle = styled.h1`
   font-size: 36px;
