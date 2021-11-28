@@ -6,7 +6,8 @@ import {
     IconHearth,
 } from "../styles/stylesSpecialties";
 
-function CardDoctorPost({ doctor }) {
+function CardDoctorPost({ doctor, specialty }) {
+    
     return(
         <CardInfoDoctor>
             <Link to={`profile/${doctor.id}`}>

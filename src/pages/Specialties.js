@@ -1,7 +1,9 @@
+import { useHistory } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import { Main } from "../styles/genericStyledComponents";
 import { IoIosArrowUp } from "react-icons/io";
-import { doctors } from "../mock/mockData";
+import { doctors } from "../mockData/mockData";
 import {
     SearchBox,
     Order,
@@ -11,17 +13,44 @@ import {
 import CardDoctorPost from "../components/CardDoctorPost";
 
 function Specialties() {
+    const history = useHistory();
+    const [specialty, setSpecialty] = useState();
+    const [byespecialtyList, setByEspecialtyList] = useState([]);
 
+    if (!localStorage.getItem("MetamorfoseTrans")) {
+        history.push('/');
+    }
+
+    function listBySpecialty(e) {
+        if(e.key === "Enter") {
+            setByEspecialtyList(doctors.filter((e) => e.speciality === specialty))
+        }
+    }
+    
     return(
         <Main>
             <Navbar />
-            <SearchBox type="text" placeholder="pesquisar por especialidade"/>
+            <SearchBox 
+                placeholder="pesquisar por especialidade"
+                onChange={(e) => setSpecialty(e.target.value)}
+                value={specialty}
+                onKeyPress={listBySpecialty}
+            />
             <IconSearch />
             <IconFilter />
             <Order>Odernar por: proximidade <span><IoIosArrowUp /></span></Order>
-            { doctors.map((doctor) => (
-               <CardDoctorPost doctor={doctor} key={doctor.id} />
-            ))}
+            { !byespecialtyList.length ? doctors.map((doctor) => (
+               <CardDoctorPost 
+                doctor={doctor} 
+                key={doctor.id}
+                specialty={specialty}
+                />
+            )): byespecialtyList.map((doctor) => (
+                <CardDoctorPost 
+                 doctor={doctor} 
+                 key={doctor.id}
+                 specialty={specialty}
+                 />))}
         </Main>
 
     );
