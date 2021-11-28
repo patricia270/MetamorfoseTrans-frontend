@@ -5,10 +5,10 @@ import { AiOutlineHeart } from "react-icons/ai";
 
 const CardInfoDoctor = styled.div`
     width: 90.4vw;
-    height: 144px;
+    min-height: 144px;
     border-radius: 10px;
     background-color: #ffffff;
-    padding: 30px 0 0 16px;
+    padding: 30px 0 10px 16px;
     display: flex;
     position: relative;
     margin-bottom: 34px;

@@ -12,7 +12,7 @@ export default function Article() {
     );
     return (
         <main>
-            <StyledBackButton onClick={() => history.push("/questions")}>
+            <StyledBackButton onClick={() => history.goBack()}>
                 <MdArrowBackIos size="25" />
             </StyledBackButton>
             <StyledTitle>
