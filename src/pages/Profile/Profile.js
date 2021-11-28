@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import { Main } from "../../styles/genericStyledComponents";
 import styled from "styled-components";
 import InfoMenu from "./InfoMenu";
+import { FaStar } from "react-icons/fa";
 
 function Profile() {
     return (
@@ -19,6 +20,13 @@ function Profile() {
                         <div>
                             <Bold>CRM:</Bold> 85490/54
                         </div>
+                        <Stars>
+                            <FaStar size="20" color="yellow" />
+                            <FaStar size="20" color="#CDCDCD" />
+                            <FaStar size="20" color="#CDCDCD" />
+                            <FaStar size="20" color="#CDCDCD" />
+                            <FaStar size="20" color="#CDCDCD" />
+                        </Stars>
                     </AuxContainer>
                 </ProfileHeader>
                 <InfoMenu />
@@ -31,7 +39,7 @@ const InnerWrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 94vh;
     background-color: #fff;
     border-radius: 8px;
     padding: 10px;
@@ -69,6 +77,10 @@ const AuxContainer = styled.div`
     > div {
         margin-top: 8px;
     }
+`;
+
+const Stars = styled.div`
+    margin-top: 10px;
 `;
 
 export default Profile;

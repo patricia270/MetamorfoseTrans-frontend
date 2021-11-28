@@ -101,7 +101,8 @@ const Main = styled.div`
         rgba(245, 168, 184, 1),
         rgba(179, 94, 250, 1)
     );
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
