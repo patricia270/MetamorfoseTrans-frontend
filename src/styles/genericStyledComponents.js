@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { Form, Field } from "formik";
 import { Box } from "@material-ui/core";
-import logo from "../assets/images/logo.png"
+import logo from "../assets/images/logo.png";
 
 const FormComponent = styled(Form)`
     display: flex;
     flex-direction: column;
     align-items: center;
     p {
-        color: #FF0000;
+        color: #ff0000;
         align-self: start;
         margin: -15px 0 10px 0;
         text-align: start;
@@ -57,7 +57,7 @@ const DivImage = styled.div`
 
 const ButtonComponent = styled.button`
     background-color: #444444;
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: bold;
     width: 83.87vw;
     height: 57px;
@@ -97,17 +97,22 @@ const TermsCheckbox = styled(Field)`
 `;
 
 const Main = styled.div`
-    background-image: linear-gradient(rgba(245, 168, 184, 1),rgba(179, 94, 250, 1) );
+    background-image: linear-gradient(
+        rgba(245, 168, 184, 1),
+        rgba(179, 94, 250, 1)
+    );
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 15px;
+    margin-top: 80px;
+
     input {
         width: 90.4vw;
         height: 57px;
     }
 `;
-
 
 export {
     FormComponent,
@@ -120,4 +125,4 @@ export {
     Label,
     TermsCheckbox,
     Main,
-}
+};
