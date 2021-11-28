@@ -3,6 +3,7 @@ import { useState } from "react";
 import { InfoList } from "../../styles/profileStyles";
 import About from "./About";
 import Contact from "./Contact";
+import Reviews from "./Reviews";
 
 export default function InfoMenu({ profileData }) {
     const { about, contact, reviews } = profileData;
@@ -21,7 +22,7 @@ export default function InfoMenu({ profileData }) {
         }
 
         if (component === "reviews") {
-            setRenderedSession(<Reviews reviewData={reviews} />);
+            setRenderedSession(<Reviews reviewsData={reviews} />);
             return;
         }
 
@@ -53,10 +54,6 @@ export default function InfoMenu({ profileData }) {
             {renderedSession}
         </MenuContainer>
     );
-}
-
-function Reviews() {
-    return <InfoList>this is the review</InfoList>;
 }
 
 const InfoNavContainer = styled.div`
