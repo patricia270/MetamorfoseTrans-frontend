@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Title } from "../../styles/profileStyles";
+import Stars from "../../components/Stars";
 
 function Reviews({ reviewsData }) {
     console.log(reviewsData);
@@ -24,7 +25,9 @@ function Reviews({ reviewsData }) {
                                         <div className="name">
                                             {review.userName}{" "}
                                         </div>
-                                        <div>{review.rating} </div>
+                                        <div>
+                                            {<Stars rating={review.rating} />}
+                                        </div>
                                     </NameContainer>
 
                                     <div>{review.comment}</div>

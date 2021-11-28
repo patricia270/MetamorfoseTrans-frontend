@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar";
 import { Main } from "../../styles/genericStyledComponents";
 import styled from "styled-components";
 import InfoMenu from "./InfoMenu";
-import { FaStar } from "react-icons/fa";
+
 import { useEffect, useState } from "react";
 import { doctors } from "../../mock/mockData";
 import { useParams } from "react-router";
@@ -33,13 +33,6 @@ function Profile() {
                             {profileData.subtitle}
                         </div>
                         <div>{profileData.doctorCode}</div>
-                        <Stars>
-                            <FaStar size="20" color="yellow" />
-                            <FaStar size="20" color="#CDCDCD" />
-                            <FaStar size="20" color="#CDCDCD" />
-                            <FaStar size="20" color="#CDCDCD" />
-                            <FaStar size="20" color="#CDCDCD" />
-                        </Stars>
                     </AuxContainer>
                 </ProfileHeader>
                 <InfoMenu profileData={profileData} />
@@ -90,10 +83,6 @@ const AuxContainer = styled.div`
     > div {
         margin-top: 8px;
     }
-`;
-
-const Stars = styled.div`
-    margin-top: 10px;
 `;
 
 export default Profile;

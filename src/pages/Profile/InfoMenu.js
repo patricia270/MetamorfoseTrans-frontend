@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { InfoList } from "../../styles/profileStyles";
 import About from "./About";
 import Contact from "./Contact";
 import Reviews from "./Reviews";
