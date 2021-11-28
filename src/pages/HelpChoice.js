@@ -15,6 +15,10 @@ import {
 function HelpChoice() {
     const history = useHistory();
 
+    if (!localStorage.getItem("MetamorfoseTrans")) {
+        history.push('/');
+    }
+
     return(
         <MyBox>
             <MyContainer>
