@@ -5,7 +5,8 @@ import UserContext from "./contexts/userContext";
 import Home from "./pages/Home";
 
 function App() {
-  const [user, setUser] = useState("")
+  const userData = JSON.parse(localStorage.getItem("MetamorfoseTrans"));
+  const [user, setUser] = useState(userData);
 
   return (
     <BrowserRouter>

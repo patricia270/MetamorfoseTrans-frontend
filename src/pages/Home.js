@@ -21,10 +21,16 @@ function Home() {
         password: "",
     }
 
+
+    if (localStorage.getItem("MetamorfoseTrans")) {
+        history.push("/help-choice");
+    }
+
     function sendLogingInfo(values) {
         postSignIn(values)
             .then((resp) => {
                 setUser(resp.data); 
+                localStorage.setItem("MetamorfoseTrans", JSON.stringify(resp.data));
                 history.push("/help-choice")               
             })
             .catch(() => { 
