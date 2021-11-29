@@ -63,7 +63,7 @@ const ButtonComponent = styled.button`
     height: 57px;
     font-size: 18px;
     border-radius: 6px;
-    margin-top: 20px;
+    margin: 20px 0;
 `;
 
 const BoxSocialLogos = styled.div`
