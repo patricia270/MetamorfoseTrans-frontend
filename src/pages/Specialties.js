@@ -1,4 +1,3 @@
-import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { Main } from "../styles/genericStyledComponents";
@@ -14,13 +13,8 @@ import CardDoctorPost from "../components/CardDoctorPost";
 import styled from "styled-components";
 
 function Specialties() {
-    const history = useHistory();
     const [specialty, setSpecialty] = useState();
     const [byespecialtyList, setByEspecialtyList] = useState([]);
-
-    if (!localStorage.getItem("MetamorfoseTrans")) {
-        history.push("/");
-    }
 
     function listBySpecialty(e) {
         if (e.key === "Enter") {

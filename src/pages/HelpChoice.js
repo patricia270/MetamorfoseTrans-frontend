@@ -1,10 +1,7 @@
 import { useHistory } from "react-router-dom";
 import questionImage from "../assets/images/question.png";
 import healthImage from "../assets/images/health.png";
-import { 
-    DivImage, 
-    MyBox, 
-} from "../styles/genericStyledComponents";
+import { DivImage, MyBox } from "../styles/genericStyledComponents";
 import {
     GroupBox,
     MyContainer,
@@ -15,11 +12,7 @@ import {
 function HelpChoice() {
     const history = useHistory();
 
-    if (!localStorage.getItem("MetamorfoseTrans")) {
-        history.push('/');
-    }
-
-    return(
+    return (
         <MyBox>
             <MyContainer>
                 <DivImage />
@@ -28,11 +21,17 @@ function HelpChoice() {
                 <h1>O que você precisa?</h1>
                 <GroupBox>
                     <BoxOptionHelp onClick={() => history.push("/specialties")}>
-                        <img src={healthImage} alt="Imagem de uma maleta de atendimento médico"/>
+                        <img
+                            src={healthImage}
+                            alt="Imagem de uma maleta de atendimento médico"
+                        />
                         <h2>Buscar médicos</h2>
                     </BoxOptionHelp>
                     <BoxOptionHelp onClick={() => history.push("/questions")}>
-                        <img src={questionImage} alt="Imagem de uma interrogação."/>            
+                        <img
+                            src={questionImage}
+                            alt="Imagem de uma interrogação."
+                        />
                         <h2>Informações</h2>
                     </BoxOptionHelp>
                 </GroupBox>
