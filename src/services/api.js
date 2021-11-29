@@ -16,6 +16,6 @@ function postSignUp(body) {
 }
 
 function signOut(config) {
-    return axios.delete(`${BASE_URL}/sessions`, config);
+    return axios.delete(`${BASE_URL}/session`, config);
 }
 export { postSignIn, postSignUp, signOut };
