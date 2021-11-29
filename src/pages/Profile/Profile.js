@@ -1,7 +1,7 @@
 import Navbar from "../../components/Navbar";
 import { Main } from "../../styles/genericStyledComponents";
 import styled from "styled-components";
-import InfoMenu from "./InfoMenu";
+import InfoMenu from "./components/InfoMenu";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { doctors } from "../../mock/mockDoctors";
@@ -18,23 +18,26 @@ function Profile() {
         setProfileData(doctorProfile);
     }, [id]);
 
-    if (!profileData) return "carregando";
     return (
         <Main>
             <Navbar />
             <InnerWrapper>
-                <ProfileHeader>
-                    <AuxContainer>
-                        <Image src={profileData.imgUrl} />
-                        <Name>{profileData.name}</Name>
-                        <div>
-                            <Bold>{profileData.speciality} </Bold> -{" "}
-                            {profileData.subtitle}
-                        </div>
-                        <div>{profileData.doctorCode}</div>
-                    </AuxContainer>
-                </ProfileHeader>
-                <InfoMenu profileData={profileData} />
+                {profileData && (
+                    <>
+                        <ProfileHeader>
+                            <AuxContainer>
+                                <Image src={profileData.imgUrl} />
+                                <Name>{profileData.name}</Name>
+                                <div>
+                                    <Bold>{profileData.speciality} </Bold> -{" "}
+                                    {profileData.subtitle}
+                                </div>
+                                <div>{profileData.doctorCode}</div>
+                            </AuxContainer>
+                        </ProfileHeader>
+                        <InfoMenu profileData={profileData} />
+                    </>
+                )}
             </InnerWrapper>
         </Main>
     );

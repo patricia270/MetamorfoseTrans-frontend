@@ -1,4 +1,4 @@
-import { Title, InfoList } from "../../styles/profileStyles";
+import { Title, InfoList } from "../../../styles/profileStyles";
 
 function About({ aboutData }) {
     return (

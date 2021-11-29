@@ -1,4 +1,4 @@
-import { Title, InfoList } from "../../styles/profileStyles";
+import { Title, InfoList } from "../../../styles/profileStyles";
 
 function Contact({ contactData }) {
     const { phone, email, workSchedule, address } = contactData;
