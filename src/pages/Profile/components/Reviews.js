@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Title } from "../../styles/profileStyles";
-import Stars from "../../components/Stars";
+import { Title } from "../../../styles/profileStyles";
+import { Stars } from "../../../styles/stylesSpecialties";
 
 function Reviews({ reviewsData }) {
     return (

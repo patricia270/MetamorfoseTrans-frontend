@@ -9,6 +9,7 @@ import HelpChoice from "./pages/HelpChoice";
 import Profile from "./pages/Profile/Profile";
 import FAQ from "./pages/FAQ/FAQ";
 import Article from "./pages/Article";
+import ScrollToTop from "./hooks/ScrollToTop";
 
 function App() {
     const userData = JSON.parse(localStorage.getItem("MetamorfoseTrans"));
@@ -16,6 +17,7 @@ function App() {
 
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <UserContext.Provider value={{ user, setUser }}>
                 <Switch>
                     <Route path="/" exact>
