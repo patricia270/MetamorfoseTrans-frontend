@@ -10,6 +10,7 @@ import Profile from "./pages/Profile/Profile";
 import FAQ from "./pages/FAQ/FAQ";
 import Article from "./pages/Article";
 import ScrollToTop from "./hooks/ScrollToTop";
+import PrivateRoute from "./middlewares/PrivateRoute";
 
 function App() {
     const userData = JSON.parse(localStorage.getItem("MetamorfoseTrans"));
@@ -26,21 +27,24 @@ function App() {
                     <Route path="/sign-up" exact>
                         <SignUp />
                     </Route>
-                    <Route path="/help-choice" exact>
-                        <HelpChoice />
-                    </Route>
-                    <Route path="/specialties" exact>
-                        <Specialties />
-                    </Route>
-                    <Route path="/profile/:id" exact>
-                        <Profile />
-                    </Route>
-                    <Route path="/questions" exact>
-                        <FAQ />
-                    </Route>
-                    <Route path="/article/:articleId" exact>
-                        <Article />
-                    </Route>
+                    <PrivateRoute
+                        path="/help-choice"
+                        element={HelpChoice}
+                        exact
+                    />
+                    <PrivateRoute
+                        path="/specialties"
+                        element={Specialties}
+                        exact
+                    />
+                    <PrivateRoute path="/profile/:id" element={Profile} exact />
+
+                    <PrivateRoute path="/questions" element={FAQ} exact />
+                    <PrivateRoute
+                        path="/article/:articleId"
+                        element={Article}
+                        exact
+                    />
                 </Switch>
                 <GlobalStyle />
             </UserContext.Provider>
