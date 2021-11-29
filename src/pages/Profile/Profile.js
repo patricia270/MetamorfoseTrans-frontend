@@ -18,7 +18,6 @@ function Profile() {
         setProfileData(doctorProfile);
     }, [id]);
 
-    if (!profileData) return "carregando";
     return (
         <Main>
             <Navbar />
