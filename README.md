@@ -1,4 +1,4 @@
-# OWhat is Metamorfose Trans?
+# What is Metamorfose Trans?
 
 ## [Versão em português](./README-pt.md)
 
